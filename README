@@ -1,0 +1,4 @@
+DO:
+- Implement calculator#calculate
+- Generate documentation with Yard
+- Implement calculator#eligible?

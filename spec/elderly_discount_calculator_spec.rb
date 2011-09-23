@@ -27,7 +27,6 @@ describe ElderlyDiscountCalculator do
           end
 
           it "should receive elderly discount for single person" do
-            pending
             calculator(@attrs).discount.should == ElderlyDiscountCalculator::ELDERLY_DISCOUNT_SINGLE
           end
         end
@@ -38,7 +37,6 @@ describe ElderlyDiscountCalculator do
           end
 
           it "should receive elderly discount for single person" do
-            pending
             calculator(@attrs).discount.should == ElderlyDiscountCalculator::ELDERLY_DISCOUNT_SINGLE
           end
         end

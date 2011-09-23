@@ -20,8 +20,10 @@ class ElderlyDiscountCalculator
   #
   # @return [Fixnum] Discount
   def discount
-    # TODO Exercise 1: Implement this method by making tests pass, try to incrementally implement the method. Choose one test and write just enough code to make it pass, then move on to the next test.
-    raise NotImplementedError
+    return 0                if @income > ELDERLY_DISCOUNT_MAXIMUM_INCOME
+    return 0                if @age < 65
+    return ELDERLY_DISCOUNT unless @single
+    ELDERLY_DISCOUNT_SINGLE
   end
 
   # Find out if a person is eligible for elderly discount, based on input

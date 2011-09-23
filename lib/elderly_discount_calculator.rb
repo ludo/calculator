@@ -20,10 +20,8 @@ class ElderlyDiscountCalculator
   #
   # @return [Fixnum] Discount
   def discount
-    return 0                if @income > ELDERLY_DISCOUNT_MAXIMUM_INCOME
-    return 0                if @age < 65
-    return ELDERLY_DISCOUNT unless @single
-    ELDERLY_DISCOUNT_SINGLE
+    return 0                if @income > ELDERLY_DISCOUNT_MAXIMUM_INCOME or @age < 65
+    @single ? ELDERLY_DISCOUNT_SINGLE : ELDERLY_DISCOUNT
   end
 
   # Find out if a person is eligible for elderly discount, based on input
